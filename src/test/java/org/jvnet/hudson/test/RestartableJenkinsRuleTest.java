@@ -93,6 +93,7 @@ public class RestartableJenkinsRuleTest {
     }
 
     @Test
+    @Issue("JENKINS-65068")
     public void verify_CopyFileVisitor_visitFileFailed_NoSuchFileException() {
         Path testPath = new File("./").toPath();
         RestartableJenkinsRule.CopyFileVisitor visitor = new RestartableJenkinsRule.CopyFileVisitor(testPath);
